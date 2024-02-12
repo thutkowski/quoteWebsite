@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Webpage Title</title>
-    <script>
-        // JavaScript code to display the current date
-        function displayDate() {
-            var currentDate = new Date();
-            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            var formattedDate = currentDate.toLocaleDateString('en-US', options);
-
-            document.getElementById('currentDate').innerHTML = formattedDate;
-        }
-    </script>
+    <title>Dynamic Title Website</title>
 </head>
 <body>
 
-<!-- Your webpage content goes here -->
-
-<p id="currentDate"></p>
-
-<!-- Your webpage content goes here -->
+<h1 id="dynamicTitle">Loading...</h1>
 
 <script>
-    // Call the displayDate function when the page loads
-    window.onload = function () {
-        displayDate();
-    };
+    // Function to fetch and process JSON data
+    function fetchTitles() {
+
+        const jsonData =[
+        "Drunk in Love", "Formation", "Partition", "Halo", "If I Were a Boy", "Mine", "Hold Up", "Flawless Remix", "Sorry", "Pray You Catch Me", "All Night", "***Flawless", "Freedom", "Don't Hurt Yourself", "Blow", "Rocket", "Listen", "Sandcastles", "7/11", "6 Inch"
+        ]
+        
+        const randomTitle = jsonData[Math.floor(Math.random() * jsonData.length)]
+
+        document.title = randomTitle;
+
+        document.getElementById('dynamicTitle').textContent = randomTitle;
+    }
+
+    // Call the function
+    fetchTitles();
 </script>
 
 </body>
 </html>
+
