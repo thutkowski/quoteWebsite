@@ -18,5 +18,5 @@ document.addEventListener('DOMContentLoaded', function() {
     titles.splice(selectedTitleIndex, 1);
 
     // Update the content of the <h1> element
-    document.getElementById('title').textContent = selectedTitle;
+    document.getElementById('dynamicTitle').textContent = selectedTitle;
 });
