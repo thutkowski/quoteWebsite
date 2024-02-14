@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var selectedTitle = titles[selectedTitleIndex];
 
     // Set the title of the page
-    document.title = selectedTitle;
+    //document.title = selectedTitle;
 
     // Remove the selected title from the array
     titles.splice(selectedTitleIndex, 1);
