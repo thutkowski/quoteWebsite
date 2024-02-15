@@ -1,7 +1,5 @@
 import json
 
-import json
-
 # Open the JSON file
 with open('output.json', 'r') as file:
     # Read the JSON data
